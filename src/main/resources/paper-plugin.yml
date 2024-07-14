@@ -1,0 +1,4 @@
+name: NoHungerReset
+version: '0.0.1'
+main: dev.pnfx.noHungerReset.NoHungerReset
+api-version: '1.21'
