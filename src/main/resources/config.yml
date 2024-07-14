@@ -1,0 +1,16 @@
+general:
+  # The plugin will only run if this is set to true.
+  enabled: true
+  # Debug mode
+  debug: false
+  # The plugin will TRY to determine if player deaths were intentional or not,
+  # and will only run if it believes the death was unintentional.
+  # (Example: drowning, falling, etc.)
+  #
+  # If false, the plugin will affect all player deaths.
+  playerSuicideDetection: false
+hungerRetention:
+  # If a player died due to starvation, their hunger will be replenished to this percentage of their MAX hunger. (ex: 0.5 = 50%)
+  percentOfMaxFedOnStarvation: 0.2
+  # Otherwise, when a player dies and respawns, their hunger is replenished to this percentage of their DYING hunger. (ex: 0.5 = 50%)
+  percentFedOnDeath: 0
