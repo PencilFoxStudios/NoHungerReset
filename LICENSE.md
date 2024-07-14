@@ -1,4 +1,4 @@
-![PNFX LICENSE](https://media.discordapp.net/attachments/998403900312920176/1012337199636815972/PNFX_LICENSE.png?width=300&height=100)
+[//]: # (![PNFX LICENSE]&#40;https://media.discordapp.net/attachments/998403900312920176/1012337199636815972/PNFX_LICENSE.png?width=300&height=100&#41;)
 > The following outlines the terms and conditions of use of this software. Receipt and/or use of this repository, and any code contained within, is subject to its PNFX LICENSE, the details of which are outlined below.
 ## Permissions
 ✅ = Permitted\
