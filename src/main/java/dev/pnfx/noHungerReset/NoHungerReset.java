@@ -1,11 +1,13 @@
 package dev.pnfx.noHungerReset;
 
+import dev.pnfx.noHungerReset.analytics.Metrics;
 import dev.pnfx.noHungerReset.listeners.PlayerDeathListener;
 import dev.pnfx.noHungerReset.listeners.PlayerRespawnListener;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
+import dev.pnfx.noHungerReset.analytics.BStats;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,14 +20,17 @@ public final class NoHungerReset extends JavaPlugin {
     private YamlConfiguration pendingHungerConfig;
     private final Map<UUID, Integer> pendingHungerLevels = new HashMap<>();
 
-
     @Override
     public void onEnable() {
         // Plugin startup logic
         saveDefaultConfig();
+
         boolean enabled = getConfig().getBoolean("general.enabled");
         if(enabled){
             logDebug("Debug mode enabled");
+            logDebug("Connecting to bStats...");
+            Metrics metrics = new Metrics(this, BStats.getPluginId());
+
             logDebug("Registering death listener...");
             getServer().getPluginManager().registerEvents(new PlayerDeathListener(this), this);
             getServer().getPluginManager().registerEvents(new PlayerRespawnListener(this), this);

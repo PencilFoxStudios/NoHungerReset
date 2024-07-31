@@ -2,7 +2,7 @@ general:
   # The plugin will only run if this is set to true.
   enabled: true
   # Debug mode
-  debug: false
+  debug: true
   # The plugin will TRY to determine if player deaths were intentional or not,
   # and will only run if it believes the death could have been intentional.
   # (Example: drowning, falling, etc.)

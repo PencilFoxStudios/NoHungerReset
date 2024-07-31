@@ -1,3 +1,4 @@
 /server/
 /build/
 /.gradle/
+/src/main/java/dev/pnfx/noHungerReset/analytics/BStats.java
